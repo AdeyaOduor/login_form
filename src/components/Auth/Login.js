@@ -1,26 +1,39 @@
 import React, { Component } from "react";
-import { Form, Header } from "semantic-ui-react";
-import "./auth.css";
-import logo from "../../images/logo.png";
+import { Link } from "react-router-dom";
+import { Button, Form, Message } from "semantic-ui-react";
+import Layout from ".Auth/Layout";
 
-class Layout extends Component {
+class Login extends Component {
   render() {
-    return (  
-    <div className="auth-main">
-    <div class="auth-content">
-      <div className="auth-card">
-        <img src={logo} alt="Logo" className="auth-logo" />
-        <Header as="h2" color="black" textAlign="center">
-          {this.props.header}
-        </Header>
-        <Form.Group size="large" className="auth-form" autocomplete="off">
-          {this.props.children}
-        </Form.Group>
-      </div>
-    </div>
-  </div>);
+    return (
+      <Layout header="Dashboard Log in">
+        <Form.Input
+          fluid
+          icon="user"
+          iconPosition="left"
+          placeholder="E-mail address"
+          className="auth-input-field"
+        />
+        <Form.Input
+          fluid
+          icon="lock"
+          iconPosition="left"
+          placeholder="Password"
+          type="password"
+          className="auth-input-field"
+        />
 
+        <Link to="/dashboard">
+          <Button color="teal" fluid size="huge">
+            Login
+          </Button>
+        </Link>
+
+        <Message size="big">
+          <Link to="/signup">Not Registered?</Link>
+        </Message>
+      </Layout>
+    );
   }
 }
-
-export default Layout;
+export default Login;
