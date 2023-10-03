@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Form, Header } from "semantic-ui-react";
 import "./auth.css";
-import logo from "../../images/logo.png";
 
 class Layout extends Component {
   render() {
