@@ -24,3 +24,7 @@ function MyBFFComponent() {
 
   return <MyComponent data={data} />;
 }
+
+// When may it be advantageous to use the BFF pattern to your React application, then? One example is having a frontend application 
+// that is both large and sophisticated, with several API calls, data processing snd aggregation responsibilities, such as a dashboard. 
+//   By separating your heavy processing logic from your frontend, you create a more scalable and maintainable architecture.
