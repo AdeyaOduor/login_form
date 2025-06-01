@@ -30,7 +30,7 @@ class Login extends Component {
         </Link>
 
         <Message size="big">
-          <Link to="/signup">Not Registered?</Link>
+          <Link to="/signup">No Account?</Link>
         </Message>
       </Layout>
     );
